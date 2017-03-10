@@ -1,0 +1,45 @@
+batchsize: 32
+epoch: 1000
+seed: 0
+snapshot_interval: 5000
+display_interval: 100
+shuffle_time_order: null
+
+models:
+  frame_seed_generator:
+    fn: models/frame_seed_generator.py
+    name: FrameSeedGenerator
+    args:
+      n_frames: 16
+      z_slow_dim: 256
+      z_fast_dim: 256
+  video_generator:
+    fn: models/video_generator.py
+    name: VideoGenerator
+    args:
+      z_slow_dim: 256
+      z_fast_dim: 256
+      out_channels: 3
+      bottom_width: 4
+      conv_ch: 512
+      wscale: 0.02
+  video_discriminator:
+      fn: models/video_discriminator.py
+      name: VideoDiscriminator
+      args:
+        in_channels: 3
+        top_width: 4
+        mid_ch: 64
+
+dataset:
+  dataset_fn: datasets/ucf_dataset.py
+  dataset_name: UCFDataset
+  args:
+    n_frames: 16
+    h5path: data/ucf101_train.h5
+    config_path: data/ucf101_train_pd.pkl
+    img_size: 64
+
+updater:
+  fn: updaters/tgan_updater_lsgan.py
+  name: TGANUpdaterLSGAN

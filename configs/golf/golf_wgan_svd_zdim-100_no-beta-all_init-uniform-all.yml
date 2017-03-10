@@ -1,0 +1,48 @@
+batchsize: 32
+epoch: 1000
+seed: 0
+snapshot_interval: 5000
+display_interval: 100
+
+models:
+  frame_seed_generator:
+    fn: models/frame_seed_generator.py
+    name: FrameSeedGeneratorNoBetaInitUniform
+    args:
+      n_frames: 16
+      z_slow_dim: 100
+      z_fast_dim: 100
+      wscale: 0.01
+
+  video_generator:
+    fn: models/video_generator.py
+    name: VideoGeneratorInitUniform
+    args:
+      z_slow_dim: 100
+      z_fast_dim: 100
+      out_channels: 3
+      bottom_width: 4
+      wscale: 0.01
+
+  video_discriminator:
+      fn: models/video_discriminator.py
+      name: VideoDiscriminatorNoBetaInitUniform
+      args:
+        in_channels: 3
+        top_width: 4
+        mid_ch: 64
+        wscale: 0.01
+
+dataset:
+  dataset_fn: datasets/golf_dataset.py
+  dataset_name: GolfDataset
+  args:
+    n_frames: 16
+    root_path: /mnt/sakura201/msaito/dcgan_video/dataset/scene/frames-stable-many
+    config_path: /mnt/sakura201/msaito/dcgan_video/dataset/scene/golf_dataset.pkl
+
+updater:
+  fn: updaters/tgan_updater_wgan.py
+  name: TGANUpdaterWGANParallelSVC
+  args:
+    freq: 5
