@@ -1,5 +1,7 @@
-Temporal Generative Adversarial Networks
-========================================
+Temporal Generative Adversarial Nets
+====================================
+
+![](https://pfnet-research.github.io/tgan/images/ucf_cond.gif)
 
 This repository contains a collection of scripts used in the experiments of
 [Temporal Generative Adversarial Nets with Singular Value Clipping](https://arxiv.org/abs/1611.06624).
