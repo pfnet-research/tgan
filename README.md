@@ -1,11 +1,12 @@
 Temporal Generative Adversarial Networks
 ========================================
 
-This repository contains a collection of scripts used in the experiments of [Temporal Generative Adversarial Nets with Singular Value Clipping](https://arxiv.org/abs/1611.06624).
+This repository contains a collection of scripts used in the experiments of
+[Temporal Generative Adversarial Nets with Singular Value Clipping](https://arxiv.org/abs/1611.06624).
 
 ## Requirements
 
-Scripts require the following python libraries.
+These scripts require the following python libraries.
 
 - Chainer 2.0.0+
 - h5py
@@ -15,7 +16,7 @@ Scripts require the following python libraries.
 - PyYAML
 - matplotlib
 
-Note that they also require ffmpeg to produce a vide from a set of images.
+Note that they also require ffmpeg to produce a video from a set of images.
 
 ## Datasets
 
