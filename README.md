@@ -56,7 +56,7 @@ python train.py --config_path configs/moving_mnist/mnist_wgan_svd_zdim-100_no-be
 python train.py --config_path configs/ucf101/ucf101_wgan_svd_zdim-100_no-beta.yml --gpu 0
 ```
 
-#### TGAN (WGAN, clipping)
+#### TGAN (WGAN and weight clipping)
 
 ```
 python train.py --config_path configs/moving_mnist/mnist_wgan_clip_zdim-100_no-beta-all_init-uniform-all.yml --gpu 0
