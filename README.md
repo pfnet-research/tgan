@@ -77,3 +77,7 @@ Please cite the paper if you are interested in:
     year = {2017},
 }
 ```
+
+## License
+
+MIT License. Please see the LICENSE file for details.
