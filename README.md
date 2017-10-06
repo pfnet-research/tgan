@@ -1,10 +1,12 @@
 Temporal Generative Adversarial Nets
 ====================================
 
-![](https://raw.githubusercontent.com/wiki/pfnet-research/tgan/images/ucf_cond_scaled.gif)
-
 This repository contains a collection of scripts used in the experiments of
 [Temporal Generative Adversarial Nets with Singular Value Clipping](https://arxiv.org/abs/1611.06624).
+
+## Results
+
+![](https://raw.githubusercontent.com/wiki/pfnet-research/tgan/images/ucf_cond_scaled.gif)
 
 ## Requirements
 
