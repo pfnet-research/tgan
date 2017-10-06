@@ -4,6 +4,8 @@ Temporal Generative Adversarial Nets
 This repository contains a collection of scripts used in the experiments of
 [Temporal Generative Adversarial Nets with Singular Value Clipping](https://arxiv.org/abs/1611.06624).
 
+Disclaimer: PFN provides no warranty or support for this implementation. Use it at your own risk. See [license](LICENSE.md) for details.
+
 ## Results
 
 ![](https://raw.githubusercontent.com/wiki/pfnet-research/tgan/images/ucf_cond_scaled.gif)
@@ -22,16 +24,18 @@ These scripts require the following python libraries.
 
 Note that they also require ffmpeg to produce a video from a set of images.
 
-## Datasets
+## Usage
+
+### Datasets
 
 In order to run our scripts, you need to prepare MovingMNIST and UCF-101 datasets as follows.
 
-### MovingMNIST
+#### MovingMNIST
 
 1. Download `mnist_test_seq.npy` from [here](http://www.cs.toronto.edu/~nitish/unsupervised_video/).
 2. Put it on `path-to-tgans/data/mnist_test_seq.npy`.
 
-### UCF-101
+#### UCF-101
 
 There are two ways to create an UCF-101 dataset for this script.
 
@@ -47,23 +51,23 @@ Another way is to simply download these files; please download them from
 [this url](https://www.dropbox.com/sh/j9fsakeuvicpeo8/AAD6BVhbZRyi7NXaMfn6TO4da?dl=0),
 and put them on the same directory.
 
-## Training
+### Training
 
-### TGAN with WGAN and Singular Value Clipping
+#### TGAN with WGAN and Singular Value Clipping
 
 ```
 python train.py --config_path configs/moving_mnist/mnist_wgan_svd_zdim-100_no-beta-all_init-uniform-all.yml --gpu 0
 python train.py --config_path configs/ucf101/ucf101_wgan_svd_zdim-100_no-beta.yml --gpu 0
 ```
 
-### TGAN (WGAN, clipping)
+#### TGAN (WGAN, clipping)
 
 ```
 python train.py --config_path configs/moving_mnist/mnist_wgan_clip_zdim-100_no-beta-all_init-uniform-all.yml --gpu 0
 python train.py --config_path configs/ucf101/ucf101_wgan_clip_zdim-100_no-beta.yml --gpu 0
 ```
 
-### TGAN (vanilla GAN)
+#### TGAN (vanilla GAN)
 
 ```
 python train.py --config_path configs/ucf101/ucf101_vanilla_zdim-100_no-beta.yml --gpu 0
@@ -81,3 +85,7 @@ Please cite the paper if you are interested in:
     year = {2017},
 }
 ```
+
+## License
+
+MIT License. Please see the LICENSE file for details.
