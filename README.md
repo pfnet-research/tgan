@@ -4,6 +4,8 @@ Temporal Generative Adversarial Networks
 This repository contains a collection of scripts used in the experiments of
 [Temporal Generative Adversarial Nets with Singular Value Clipping](https://arxiv.org/abs/1611.06624).
 
+Disclaimer: PFN provides no warranty or support for this implementation. Use it at your own risk. See [license](LICENSE.md) for details.
+
 ## Requirements
 
 These scripts require the following python libraries.
