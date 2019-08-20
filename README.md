@@ -73,6 +73,12 @@ python train.py --config_path configs/ucf101/ucf101_wgan_clip_zdim-100_no-beta.y
 python train.py --config_path configs/ucf101/ucf101_vanilla_zdim-100_no-beta.yml --gpu 0
 ```
 
+## Quantitative evaluation on UCF101 (2019/08/20)
+
+We have uploaded ``mean2.npz`` on GitHub because there are many inquiries about the mean file in the UCF101.
+If you want to perform a quantitative evaluation, please download it from
+[this url](https://github.com/pfnet-research/tgan/releases/download/v1.0.0/mean2.npz).
+
 ## Citation
 
 Please cite the paper if you are interested in:
