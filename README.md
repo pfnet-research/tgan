@@ -1,6 +1,8 @@
 Temporal Generative Adversarial Nets
 ====================================
 
+**The new version of TGAN has been published and the code is available: [TGANv2](https://github.com/pfnet-research/tgan2).**
+
 This repository contains a collection of scripts used in the experiments of
 [Temporal Generative Adversarial Nets with Singular Value Clipping](https://arxiv.org/abs/1611.06624).
 
